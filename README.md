@@ -7,7 +7,7 @@ A Docker Container to build MkDocs documentation.
 In generaye and run a HTTP server exposing the HTML Site, mount the directory containing the `mkdocs.yml` file into the container during the container run: -
 
 ``` bash tabs="Bash"
-docker run -it -v ${PWD}:/mkdocs donmstewart/mkdocs:1.0.4
+docker run -it -v ${PWD}:/mkdocs -p 8000:8000 donmstewart/mkdocs:1.0.4
 ```
 
 You can browse the documentation at http://localhost:8000/
