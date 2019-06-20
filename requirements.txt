@@ -1,0 +1,9 @@
+# Direct dependencies
+mkdocs>=1
+mkdocs-material>=3.0.4
+mkdocs-minify-plugin>=0.2
+Pygments>=2.2
+pymdown-extensions>=4.11
+weasyprint>=47
+mkdocs-pdf-export-plugin>=0.5.5
+mkdocs-macros-plugin>=0.2.4
