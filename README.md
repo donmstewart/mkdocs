@@ -1,5 +1,11 @@
 ![Docker Automated](https://img.shields.io/docker/cloud/automated/donstewart/mkdocs.svg?style=popout)
 ![Docker Build](https://img.shields.io/docker/cloud/build/donstewart/mkdocs.svg?style=popout)
+![Docker Pulls](https://img.shields.io/docker/pulls/donstewart/mkdocs.svg?style=popout)
+![Docker Stars](https://img.shields.io/docker/stars/donstewart/mkdocs.svg?style=popout)
+![License](https://img.shields.io/github/license/donmstewart/mkdocs.svg?style=popout)
+![GitHub Open Issues](https://img.shields.io/github/issues-raw/donmstewart/mkdocs.svg?style=popout)
+![GitHub Closed Issues](https://img.shields.io/github/issues-closed-raw/donmstewart/mkdocs.svg?style=popout)
+
 # MkDocs Project Documentation Container Image
 
 A Docker Container to build MkDocs documentation.
