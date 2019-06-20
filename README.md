@@ -2,7 +2,14 @@
 
 A Docker Container to build MkDocs documentation.
 
-## Running the Container - Run a local HTTP Server
+There are a number of option with the Docker Container depending on your goals: -
+
+* Run a local Documentation Server
+* Generate the Documentation Site & Exit
+* Generate the Documentation Site + Generate a PDF Document & Exit
+* Publishing the Documentation to GitHub Pages
+
+## Running the Container - Run a local Documentation Server
 
 In generaye and run a HTTP server exposing the HTML Site, mount the directory containing the `mkdocs.yml` file into the container during the container run: -
 
@@ -19,7 +26,7 @@ The build output will be in your local filesystem at `./_site`.
 !!! warning
     Do not check the `_site_` directory into git make sure it is in your `.gitgnore` file.
 
-## Running the Container - Generate the HTML Site & Exit
+## Running the Container - Generate the Documentation & Exit
 
 In order to build the HTML Site mount the directory containing the `mkdocs.yml` file
 into the container during the container run: -
@@ -30,7 +37,7 @@ docker run -it -v ${PWD}:/mkdocs donstewart/mkdocs:1.0.4 build
 
 When the container exits the build output will be in your local filesystem at `./_site`.
 
-## Running the Container - Generate the HTML Site + Generate a PDF Document & Exit
+## Running the Container - Generate the Documentation + Generate a PDF Document & Exit
 
 In addition to building the Site HTML it is also possible to generate a PDF document of the markdown site: -
 
@@ -41,7 +48,7 @@ docker run -it -v ${PWD}:/mkdocs -e ENABLE_PDF_EXPORT=1  donstewart/mkdocs:1.0.4
 When the container exits the build output will be in your local filesystem at `./_site`.
 The PDF file generated can be found at `./_site/PDF/combined.pdf`.
 
-## Running the Container - Publishing the HTML to GitHub Pages
+## Running the Container - Publishing the Documentation to GitHub Pages
 
 It is also possible to build & publish the documentation to a GitHub pages site for your project. In order to do this make sure you project is cloned from GitHub and has it's `origin` set correctly. You can then publish using: -
 
