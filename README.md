@@ -1,3 +1,5 @@
+![Docker Automated](https://img.shields.io/docker/cloud/automated/donstewart/mkdocs.svg?style=popout)
+![Docker Build](https://img.shields.io/docker/cloud/build/donstewart/mkdocs.svg?style=popout)
 # MkDocs Project Documentation Container Image
 
 A Docker Container to build MkDocs documentation.
