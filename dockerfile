@@ -45,6 +45,15 @@ FROM python:${PYTHON_VERSION}
 
 ENV PYTHONUNBUFFERED 1
 
+LABEL "com.github.actions.name"="DockerPS MkDocs"
+LABEL "com.github.actions.description"="Builds MkDocs Site Output"
+LABEL "com.github.actions.icon"="mic"
+LABEL "com.github.actions.color"="blue"
+
+LABEL "repository"="https://github.com/donmstewart/mkdocs.git"
+LABEL "homepage"="http://github.com/actions"
+LABEL "maintainer"="Don Stewart <don.stewart@docker.com>"
+
 # Perform build and cleanup artifacts
 #
 # Cairo & Pango need to use -dev versions due
