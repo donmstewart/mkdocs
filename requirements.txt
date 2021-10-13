@@ -1,6 +1,6 @@
 # Direct dependencies
-mkdocs>=1
-mkdocs-material>=3.0.4
+mkdocs>=1.2.0
+mkdocs-material>=7.3.0
 mkdocs-minify-plugin>=0.2
 Pygments>=2.2
 pymdown-extensions>=4.11
