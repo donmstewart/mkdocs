@@ -19,10 +19,11 @@ There are a number of option with the Docker Container depending on your goals: 
 
 ## Running the Container - Run a local Documentation Server
 
-In generaye and run a HTTP server exposing the HTML Site, mount the directory containing the `mkdocs.yml` file into the container during the container run: -
+In generate and run a HTTP server exposing the HTML Site, mount the directory containing the `mkdocs.yml`
+file into the container during the container run: -
 
 ``` bash tabs="Bash"
-docker run -it -v ${PWD}:/mkdocs -p 8000:8000 donstewart/mkdocs:1.0.4
+docker run -it -v ${PWD}:/mkdocs -p 8000:8000 donstewart/mkdocs:release-1.2.2
 ```
 
 You can browse the documentation at http://localhost:8000/
@@ -40,7 +41,7 @@ In order to build the HTML Site mount the directory containing the `mkdocs.yml` 
 into the container during the container run: -
 
 ``` bash tabs="Bash"
-docker run -it -v ${PWD}:/mkdocs donstewart/mkdocs:1.0.4 build
+docker run -it -v ${PWD}:/mkdocs donstewart/mkdocs:release-1.2.2 build
 ```
 
 When the container exits the build output will be in your local filesystem at `./_site`.
@@ -50,7 +51,7 @@ When the container exits the build output will be in your local filesystem at `.
 In addition to building the Site HTML it is also possible to generate a PDF document of the markdown site: -
 
 ``` bash tabs="Bash"
-docker run -it -v ${PWD}:/mkdocs -e ENABLE_PDF_EXPORT=1  donstewart/mkdocs:1.0.4
+docker run -it -v ${PWD}:/mkdocs -e ENABLE_PDF_EXPORT=1  donstewart/mkdocs:release-1.2.2
 ```
 
 When the container exits the build output will be in your local filesystem at `./_site`.
@@ -58,10 +59,12 @@ The PDF file generated can be found at `./_site/PDF/combined.pdf`.
 
 ## Running the Container - Publishing the Documentation to GitHub Pages
 
-It is also possible to build & publish the documentation to a GitHub pages site for your project. In order to do this make sure you project is cloned from GitHub and has it's `origin` set correctly. You can then publish using: -
+It is also possible to build & publish the documentation to a GitHub pages site for your project.
+In order to do this make sure you project is cloned from GitHub and has it's `origin` set correctly. 
+You can then publish using: -
 
 ``` bash tabs="Bash"
-docker run -it -v ${PWD}:/mkdocs donstewart/mkdocs:1.0.4 gh-deploy
+docker run -it -v ${PWD}:/mkdocs donstewart/mkdocs:release-1.2.2 gh-deploy
 ```
 
 > Do not generate the PDF unless you want to store the PDF file in your GitHub repo.
